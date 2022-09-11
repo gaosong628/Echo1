@@ -23,7 +23,7 @@ int main(){
     perror("[-]Socket error");
     exit(1);
   }
-  printf("[+]TCP server socket created.\n");
+  //printf("[+]TCP server socket created.\n");
 
   memset(&addr, '\0', sizeof(addr));
   addr.sin_family = AF_INET;
@@ -31,7 +31,7 @@ int main(){
   addr.sin_addr.s_addr = inet_addr(ip);
 
   connect(sock, (struct sockaddr*)&addr, sizeof(addr));
-  printf("Connected to the server.\n");
+  //printf("Connected to the server.\n");
  while(1)
  {
     printf("Please type in Message sending to Server: ");
@@ -41,7 +41,7 @@ int main(){
     
     bzero(buffer,1024);
     recv(sock,buffer,sizeof(buffer),0);
-    printf("Message Reveived from server: %s\n",buffer);
+    printf("%s\n",buffer);
         
     }
     close(sock);
