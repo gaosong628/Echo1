@@ -34,7 +34,7 @@ int main(){
   //printf("Connected to the server.\n");
  while(1)
  {
-    printf("Please type in Message sending to Server: ");
+    //printf("Please type in Message sending to Server: ");
     fgets(buffer,sizeof(buffer),stdin);
     /*printf("Please type in Message sending to Server:");*/
     send(sock, buffer, sizeof(buffer),0);
